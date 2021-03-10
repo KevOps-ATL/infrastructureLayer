@@ -1,15 +1,11 @@
-# Variables we can pass to the resource
-
 variable "nats" {
   type = map(any)
   default = {
-    private1 = {
-      allocation_id = "eip_id"
-      subnet_id     = "subnet_id"
+    natgw = {
+      subnet_id = "KevOpsVPC"
     }
   }
 }
-
 
 variable "tomato" {
   type        = map(any)
@@ -22,10 +18,3 @@ variable "eip" {
   default     = { "eip_name" = "eip_id" }
   description = "eip to associate natgw with"
 }
-
-variable "vpc_map" {
-  type        = map(any)
-  default     = { "vpc_name" = "vpc_id" }
-  description = "vpc to associate subnets with"
-}
-

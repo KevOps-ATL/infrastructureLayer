@@ -38,24 +38,5 @@ variable "gateway" {
     }
   }
 }
-variable "vpc_id" {
-  type        = map(any)
-  default     = { "vpc_name" = "vpc_id" }
-  description = "vpc to associate subnets with"
-}
 
-/* variable "eips" {
-  type    = bool
-  default = true
-}
 
- variable "nats" {
-  type = map(any)
-  default = {
-    private1 = {
-      allocation_id = "ateway1g"
-      subnet_id     = "subnet_id"
-    }
-  }
-}
-*/
